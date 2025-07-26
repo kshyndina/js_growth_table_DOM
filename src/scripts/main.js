@@ -29,7 +29,9 @@ aCol.addEventListener('click', () => {
   rCol.disabled = false;
 
   for (const i of field.children) {
-    i.appendChild(i.firstElementChild.cloneNode(true));
+    const cell = document.createElement('td');
+
+    i.appendChild(cell);
   }
 
   if (field.firstElementChild.childElementCount >= 10) {
